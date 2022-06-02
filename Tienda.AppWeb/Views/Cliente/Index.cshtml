@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Tienda.Core.Cliente>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Listado de Clientes</h2>
+@foreach (var item in Model)
+{
+    <h1>@item.Nombre</h1>
+}
