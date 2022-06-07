@@ -4,7 +4,20 @@
 }
 
 <h2>Listado de Clientes</h2>
-@foreach (var item in Model)
-{
-    <h1>@item.Nombre</h1>
-}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>N° Documento</th>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.NroDocumento</td>
+                <td>@item.Nombre</td>
+            </tr>
+        }
+    </tbody>    
+</table>
