@@ -15,5 +15,12 @@ namespace Tienda.AppWeb.Controllers
             var listaProductos = ProductoBL.Listar();
             return View(listaProductos);
         }
+
+        public ActionResult Editar(int id)
+        {
+            var producto = ProductoBL.ObtenerPorId(id);
+            ViewBag.categorias = CategoriaBL.Listar();
+            return View(producto);
+        }
     }
 }
